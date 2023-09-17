@@ -1,0 +1,19 @@
+{
+  "palette:rosPineAdjusted:1689812272381": {
+    "name": "Rosé Pine (adjusted)",
+    "black": "224,222,244",
+    "white": "38,35,58",
+    "white-on-dark": "110,106,134",
+    "navy": "25,23,36",
+    "red": "235,111,146",
+    "orange": "246,193,119",
+    "yellow": "239,227,118",
+    "green": "83,204,158",
+    "blue": "123,182,225",
+    "purple": "183,157,215",
+    "pink": "221,160,222",
+    "accent": "63,173,163",
+    "secondary-accent": "31,29,46",
+    "follow": "124,175,233"
+  }
+}

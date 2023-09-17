@@ -1,0 +1,19 @@
+{
+  "palette:everforestAdjusted:1687514479489": {
+    "name": "Everforest (adjusted)",
+    "black": "211,198,170",
+    "white": "61,72,77",
+    "white-on-dark": "211,198,177",
+    "navy": "35,42,46",
+    "red": "230,126,128",
+    "orange": "230,152,117",
+    "yellow": "223,216,130",
+    "green": "131,192,148",
+    "blue": "122,166,192",
+    "purple": "170,149,225",
+    "pink": "214,153,182",
+    "accent": "135,187,104",
+    "secondary-accent": "48,57,63",
+    "follow": "167,192,128"
+  }
+}
