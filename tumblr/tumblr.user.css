@@ -1,0 +1,45 @@
+/* ==UserStyle==
+@name           [SNK] tumblr
+@namespace      snake (playmoar.neocities.org)
+@version        2.0
+@updateURL		  
+@license        CC0-1.0
+@description    a userstyle tweaking tumblr's layout
+==/UserStyle== */
+@-moz-document domain("www.tumblr.com") {
+
+/* ADJUSTMENTS */
+/* remove column borders */
+.FA5JM, .gPQR5.FGfuE .lSyOz, .gPQR5.FGfuE .lSyOz, .p4DiZ { border-color:transparent!important; }
+/* removes border + padding around notecount */
+.vE6sH, .rlv6m .ePsyd { padding:0!important; border:0!important; background:transparent!important; } /* notecount */
+
+/* REMOVAL */
+/* left sidebar */
+[href*="/explore"], /* explore */
+[href*="/live"], /* live */
+.visx-linepath, /* activity graph */
+/* account v */
+#account_subnav > li.g8SYn.IYrO9 > .tDT48 > .a132D > .jF6A2, /* extra number counts on like / follower link */
+[href*="/changes"], /* what's new */
+[href*="/help"], /* help */
+[href*="/post-plus"], /* post+ */
+[href*="/blaze"], /* blaze */
+/* settings v */
+[href*="/settings/subscriptions"], /* post+ subscriptions */
+/* --------- */
+[aria-label="TumblrMart"], /* tumblr mart */
+[href*="/domains"], /* get a domain */
+[href*="/settings/purchases"], /* payments */
+[href*="/settings/ad-free-browsing"], /* go ad-free */
+/* RIGHT SIDEBAR ### */
+.j_AvJ._qHCt.m8mN_, /* footer */
+/* DASHBOARD ### */
+.bZTy6.WVvBo, .X4W3M.Dk06o, /* dashboard tabs */
+.HphhS, /* check these out header */
+.kDCXR.Oii0L, /* check these out carousel */
+/* POSTS ### */
+[aria-label="Blaze"] /* blaze button */
+{ display:none!important; }
+
+}
