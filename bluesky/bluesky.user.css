@@ -1,0 +1,97 @@
+/* ==UserStyle==
+@name           [SNK] bluesky
+@namespace      snake (https://playmoar.neocities.org/)
+@version        1.0
+@description    small edits to bluesky's layout
+@preprocessor   stylus
+
+@advanced checkbox followToggle "hide follower counts" 0
+@advanced checkbox numberToggle "hide interaction numbers" 0
+@advanced checkbox postToggle "hide post count" 0
+@advanced checkbox topToggle "hide back to top button" 0
+@advanced checkbox rightToggle "hide right sidebar" 0
+@advanced checkbox colorToggle "custom colors (fucked up)" 0
+@advanced color bgColor "background" #12141a
+@advanced color fgColor "foreground" #2D353B
+@advanced color accentColor "accent" #A7C080
+@advanced color textColor "text" #D3C6AA
+==/UserStyle== */
+@-moz-document domain("bsky.app") {
+
+/* MIDDLE COLUMN ### */
+/* POSTS */
+/* poster header */
+.r-1bymd8e.r-177avk6.r-15zivkp.r-18u37iz.r-1otgn73.r-1loqt21.css-175oi2r { margin:0 0 10px 0!important; }
+.r-1bymd8e.r-177avk6.r-15zivkp.r-18u37iz.r-1otgn73.r-1loqt21.css-175oi2r > svg { display:none!important; }
+.r-l4nmg1 { padding-bottom:5px!important; }
+/* hide interaction counts */
+if numberToggle { .css-146c3p1.r-1f6r7vd.r-a023e6, .css-146c3p1.r-h7gdob { display:none!important; } }
+/* PROFILES */
+/* follower counts */
+if followToggle { a.r-zso239.r-18u37iz.r-1otgn73.r-1loqt21.css-175oi2r > .r-vw2c0b.css-146c3p1 { display:none!important; } }
+/* post count */
+if postToggle { div.r-5oul0u.r-18u37iz.css-175oi2r > .r-vw2c0b.css-146c3p1 { display:none!important; } }
+/* back to top button */
+if topToggle { .r-8br3cv.r-a2mu05.r-u8s1d.r-8l2rlp.r-1777fci.r-1sn7ly2.r-18u37iz.r-te4v75.r-rs99b7.r-1llaxt6.r-1awozwy.r-1otgn73.r-1loqt21.r-lrvibr.r-1i6wzkk.css-175oi2r { display:none!important; } }
+/* RIGHT SIDEBAR ### */
+if rightToggle { .r-ryqm5k.r-1ej1qmr.r-u8s1d.r-1u20jyi.css-175oi2r { display:none!important; } }
+/* little footer */
+.css-175oi2r.r-1x0uki6.r-1ubuhtd { display:none!important; }
+.r-3pj75a.r-1mmae3n.r-1s2bzr4.r-18u37iz.r-5kkj8d.r-1awozwy.r-1otgn73.r-1loqt21.r-lrvibr.r-1i6wzkk.css-175oi2r { padding:10px!important }
+
+/* COLORS ### */
+if colorToggle {
+html.colorMode--dark { --text:textColor!important; --background:bgColor!important; --backgroundLight:fgColor!important; }
+/* TEXT */
+.css-146c3p1,
+.r-ry3cjt.r-1hfyk0a.r-1udh08x.r-1loqt21.r-5kkj8d.css-175oi2r > .r-1cvj4g8.r-uaa2di.r-18u37iz.css-175oi2r > .r-13awgt0.css-175oi2r > .r-184en5c.r-l4nmg1.r-9aw3ui.r-18u37iz.r-1d09ksm.css-175oi2r
+{ color:textColor!important; }
+/* icons */
+/* stroked */
+.r-ry3cjt.r-1hfyk0a.r-1udh08x.r-1loqt21.r-5kkj8d.css-175oi2r > .r-1cvj4g8.r-uaa2di.r-18u37iz.css-175oi2r > .r-13awgt0.css-175oi2r > .r-1wtj0ep.r-18u37iz.css-175oi2r > button.r-glunga.r-19gegkz.r-1inuy60.r-18u37iz.r-1awozwy.r-1otgn73.r-1loqt21.r-lrvibr.r-1i6wzkk.css-175oi2r > .r-1cvj4g8 > path,
+.r-ry3cjt.r-1hfyk0a.r-1udh08x.r-1loqt21.r-5kkj8d.css-175oi2r > .r-1cvj4g8.r-uaa2di.r-18u37iz.css-175oi2r > .r-13awgt0.css-175oi2r > .r-1wtj0ep.r-18u37iz.css-175oi2r > button.r-1otgn73.r-1loqt21.r-lrvibr.r-1i6wzkk.css-175oi2r > .r-1uu6nss.r-9aw3ui.r-18u37iz.r-6koalj.r-1awozwy.css-175oi2r > svg > path
+.r-ry3cjt.r-1hfyk0a.r-1udh08x.r-1loqt21.r-5kkj8d.css-175oi2r > .r-1cvj4g8.r-uaa2di.r-18u37iz.css-175oi2r > .r-13awgt0.css-175oi2r > .r-1wtj0ep.r-18u37iz.css-175oi2r > .r-glunga.r-19gegkz.r-qhyqy2.r-1inuy60.r-18u37iz.r-1awozwy.r-1otgn73.r-1loqt21.r-lrvibr.r-1i6wzkk.css-175oi2r > svg > path,
+#radix-\:r8\: > .css-175oi2r > .r-glunga.r-19gegkz.r-qhyqy2.r-1inuy60.css-175oi2r > svg > path,
+.r-184en5c.r-1iww7jx.r-1bymd8e.r-1777fci.r-h0d30l.r-1awozwy.css-175oi2r > svg > ellipse,
+.r-184en5c.r-1iww7jx.r-1bymd8e.r-1777fci.r-h0d30l.r-1awozwy.css-175oi2r > svg > path
+{ stroke:textColor!important; }
+/* filled */
+.r-199as6u.r-1uudbju.r-n7gxbd.r-cnw61z.r-kc8jnq.r-919cjt.r-1xfd6ze.r-krx8kp.r-126c2a1.r-11ab3e.css-175oi2r > div > div > .r-3o4zer.r-11f147o.r-1wtj0ep.r-18u37iz.r-1loqt21.r-k73bfn.r-1xfd6ze.r-1awozwy.css-175oi2r > .css-175oi2r > svg > path,
+.r-199as6u.r-1uudbju.r-n7gxbd.r-cnw61z.r-kc8jnq.r-919cjt.r-1xfd6ze.r-krx8kp.r-126c2a1.r-11ab3e.css-175oi2r > div > .r-3o4zer.r-11f147o.r-1wtj0ep.r-18u37iz.r-1loqt21.r-k73bfn.r-1xfd6ze.r-1awozwy.css-175oi2r > .css-175oi2r > svg > path,
+#radix-\:r0\: > .css-175oi2r > .r-glunga.r-19gegkz.r-qhyqy2.r-1inuy60.css-175oi2r > svg > path
+{ fill:textColor!important; }
+/* dimmed text */
+.r-ry3cjt.r-1hfyk0a.r-1udh08x.r-1loqt21.r-5kkj8d.css-175oi2r > .r-1cvj4g8.r-uaa2di.r-18u37iz.css-175oi2r > .r-13awgt0.css-175oi2r > .r-184en5c.r-l4nmg1.r-9aw3ui.r-18u37iz.r-1d09ksm.css-175oi2r > .r-q5oqfz.css-175oi2r > .r-1loqt21.r-1iln25a.r-3s2u2q.r-1udbk01.r-1udh08x.r-dnmrzs.css-146c3p1 > .r-1iln25a.r-3s2u2q.r-1udbk01.r-1udh08x.r-dnmrzs.css-1jxf684 { color:textColor!important; opacity:50% }
+/* background */
+.css-175oi2r { background-color:bgColor!important; }
+/* foreground */
+.r-wzwllv, .css-175oi2r.r-y47klf.r-1559e4e.r-3pj75a.r-1ipicw7 { background-color:fgColor!important; }
+/* accent */
+.r-1loqt21.r-1iln25a.r-3s2u2q.r-1udbk01.r-1udh08x.r-dnmrzs.css-1jxf684,
+.css-146c3p1.r-1i10wst, .r-1jizoa0.r-1iln25a.r-3s2u2q.r-1udbk01.r-1udh08x.css-146c3p1, .r-1loqt21.r-13awgt0.css-1jxf684 { color:accentColor!important; }
+.r-5t7p9m.r-1ubuhtd.r-kzbkwu.r-1777fci.r-opedn5.r-1otgn73.r-1loqt21.css-175oi2r { border-color:accentColor!important; }
+button.r-ubg91z.r-1otgn73.r-1loqt21.r-lrvibr.r-1i6wzkk.css-175oi2r > svg > path, #radix-\:r2v\: > svg > path { fill:accentColor!important; }
+/* color removal */
+.r-1w88a7h.r-1ki14p2.r-c6jqw7.r-u8s1d.r-1rnoaur.r-pgf20v.css-175oi2r,
+.r-ry3cjt.r-1hfyk0a.r-1udh08x.r-1loqt21.r-5kkj8d.css-175oi2r,
+.r-ryqm5k.r-1ej1qmr.r-u8s1d.r-1u20jyi.css-175oi2r,
+.css-175oi2r.r-bnwqim.r-1ipicw7,
+.r-1ipicw7.r-3pj75a.r-1559e4e.r-y47klf.css-175oi2r > .r-18u37iz.css-175oi2r,
+.r-1n20pny.r-3pj75a.r-ytbthy.r-1x0uki6.r-19u6a5r.r-15d164r.r-1777fci.r-1cmwbt1.r-18u37iz.r-1fuqb1j.r-wzwllv.r-1awozwy.r-1otgn73.r-1loqt21.r-lrvibr.r-1i6wzkk.css-175oi2r > .css-175oi2r,
+.r-1kesqaa.r-1629w56.r-u8s1d.r-1t68eob.r-1s5nyi.r-d045u9.r-1wh0n7e.css-175oi2r > .css-175oi2r
+{ background-color:transparent!important; }
+}
+
+/* BORDERS ### */
+.r-sa2ff0.r-13l2t4g.r-1ljd8xs.r-13qz1uu.r-1ye8kvj.r-lchren.r-1jj8364.r-q5xsgd.css-175oi2r,
+.r-13qz1uu.r-1ye8kvj.r-lchren.r-1jj8364.r-13l2t4g.r-1ljd8xs.r-1pi2tsx.css-175oi2r,
+.r-zh076v.r-agouwx.r-1rnoaur.r-11yh6sk.r-1wbh5a2.r-16y2uox.r-eqz5dr.r-150rngu.css-175oi2r > .r-sa2ff0.r-13l2t4g.r-1ljd8xs.r-13qz1uu.r-1ye8kvj.r-lchren.r-1jj8364.css-175oi2r,
+.r-1pi2tsx.r-agouwx.r-1rnoaur.r-11yh6sk.r-1wbh5a2.r-16y2uox.r-eqz5dr.r-150rngu.css-175oi2r > .r-sa2ff0.r-13l2t4g.r-1ljd8xs.r-13qz1uu.r-1ye8kvj.r-lchren.r-1jj8364.css-175oi2r,
+.r-m611by.r-u9wvl5.r-1mi0q7o.r-18u37iz.r-5kkj8d.r-1awozwy.r-1otgn73.r-1loqt21.r-lrvibr.r-1i6wzkk.css-175oi2r,
+.r-1pi2tsx.r-agouwx.r-1rnoaur.r-11yh6sk.r-1wbh5a2.r-16y2uox.r-eqz5dr.r-150rngu.css-175oi2r > .r-sa2ff0.r-13l2t4g.r-1ljd8xs.r-13qz1uu.r-1ye8kvj.r-lchren.r-1jj8364.css-175oi2r > div.css-175oi2r > .r-1loqt21.r-1hfyk0a.r-5kkj8d.css-175oi2r,
+.r-cqilzk.r-5kkj8d.css-175oi2r,
+.r-1sp51qo.r-1g94qm0.r-ku1wi2.r-18u37iz.r-5kkj8d.r-qklmqi.css-175oi2r,
+.r-3pj75a.r-1mmae3n.r-1s2bzr4.r-18u37iz.r-5kkj8d.r-1awozwy.r-1otgn73.r-1loqt21.r-lrvibr.r-1i6wzkk.css-175oi2r
+{ border:0!important; }
+
+}
